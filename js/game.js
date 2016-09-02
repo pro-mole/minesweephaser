@@ -4,7 +4,10 @@ var menuState = {
     },
     
     create: function() {
+        game.canvas.oncontextmenu = function (e) { e.preventDefault(); }
         
+        //Title
+        var title = game.add.graphics()
     },
     
     update: function() {
@@ -22,7 +25,7 @@ var gameplayState =  {
     },
     
     create: function() {
-        game.grid = new MineGrid(16,16,32);
+        game.grid = new MineGrid(16,16,28,4);
     },
     
     update: function() {
